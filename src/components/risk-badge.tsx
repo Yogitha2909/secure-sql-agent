@@ -1,0 +1,3 @@
+import { CircleAlert, ShieldCheck, Shield } from "lucide-react";
+import type { RiskLevel } from "@/types";
+export function RiskBadge({ risk }: { risk: RiskLevel }) { const Icon = risk === "high" ? CircleAlert : risk === "medium" ? Shield : ShieldCheck; return <span className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 font-mono text-[10px] font-semibold uppercase risk-${risk}`}><Icon className="size-3" />{risk} risk</span>; }
